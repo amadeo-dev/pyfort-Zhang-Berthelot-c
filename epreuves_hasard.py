@@ -1,9 +1,9 @@
 import random
 
 def epreuves_hasard():
-    epreuves = (bonneteau,jeu_lance_des)
+    epreuves = [bonneteau, jeu_lance_des]
     epreuve = random.choice(epreuves)
-    epreuve()
+    return epreuve()
 
 
 def bonneteau():
@@ -50,4 +50,4 @@ def jeu_lance_des():
     print("Personne n'a emporté la partie")
     return False
 
-print(bonneteau())
+print(epreuves_hasard())
