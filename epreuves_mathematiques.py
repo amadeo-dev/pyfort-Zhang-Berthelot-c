@@ -1,5 +1,4 @@
 from math import *
-import random
 
 def epreuve_maths():
     pass
@@ -25,7 +24,7 @@ def epreuve_maths_factorielle():
         return True
     else :
         print("Votre réponse est :", d)
-        print("Incorrect ! Vous avez raté l'épreuve de mathématiques.")
+        print("Incorrect ! Vous avez raté l'épreuve.")
         return False
 
 # fin épreuve maths factorielle
@@ -48,5 +47,18 @@ def premier_plus_proche(n):
         else:
             i = i + 1
 
+def epreuve_maths_premier():
+    import random
+    n = random.randint(10,20)
+    a = int(input("Épreuve de Mathématiques: Trouver le nombre premier le plus proche de ", n ": "))
+    b = premier_plus_proche(n)
+    if a == b :
+        print("Votre réponse :", a)
+        print("Correct ! Vous gagnez une clé.")
+        return True
+    else :
+        print("Votre réponse est :", a)
+        print("Incorrect ! Vous avez raté l'épreuve !")
+        return False
 
 # fin epreuve maths premier
