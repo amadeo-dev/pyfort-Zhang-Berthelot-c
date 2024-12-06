@@ -50,7 +50,7 @@ def premier_plus_proche(n):
 def epreuve_maths_premier():
     import random
     n = random.randint(10,20)
-    a = int(input("Épreuve de Mathématiques: Trouver le nombre premier le plus proche de ", n ": "))
+    a = int(input(f"Épreuve de Mathématiques: Trouver le nombre premier le plus proche de {n} : "))
     b = premier_plus_proche(n)
     if a == b :
         print("Votre réponse :", a)
@@ -62,3 +62,4 @@ def epreuve_maths_premier():
         return False
 
 # fin epreuve maths premier
+
