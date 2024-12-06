@@ -48,3 +48,6 @@ def premier_plus_proche(n):
 def epreuve_math_premier():
     n = random.randint(10,20)
     a = int(input("Épreuve de Mathématiques: Trouver le nombre premier le plus proche
+
+
+jgkiufyiyi
