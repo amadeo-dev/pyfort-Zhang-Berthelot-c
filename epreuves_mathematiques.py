@@ -2,7 +2,7 @@ from math import *
 import random
 
 def epreuves_mathematiques():
-    epreuves = [la factorielle,les nombres premiers,la roulette mathématique]
+    epreuves = [epreuve_maths_factorielle,epreuve_maths_premier]
     epreuve = random.choice(epreuves)
     return epreuve()
 
@@ -66,3 +66,12 @@ def epreuve_maths_premier():
 
 # fin epreuve maths premier
 
+# début epreuve roulette mathématique
+
+def epreuve_roulette_mathematique():
+
+
+
+#fin epreuve roulette mathématique
+
+print(epreuves_mathematiques())
