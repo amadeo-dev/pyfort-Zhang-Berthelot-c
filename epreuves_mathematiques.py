@@ -1,7 +1,10 @@
 from math import *
+import random
 
-def epreuve_maths():
-    pass
+def epreuves_mathematiques():
+    epreuves = [la factorielle,les nombres premiers,la roulette mathématique]
+    epreuve = random.choice(epreuves)
+    return epreuve()
 
 # debut épreuve maths factorielle
 
