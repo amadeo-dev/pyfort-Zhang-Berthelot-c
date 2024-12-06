@@ -9,12 +9,16 @@ def epreuves_mathematiques():
 
 # debut épreuve maths factorielle
 
+# fonction pour trouver la factorielle de n
+
 def factorielle(n):
     a = 1
     for i in range(1, n + 1):
         a *= i
         n = a
     return n
+
+# fonction de l'epreuve factorielle de mathematique
 
 def epreuve_maths_factorielle():
     c = 0
@@ -35,11 +39,15 @@ def epreuve_maths_factorielle():
 
 # debut epreuve premier
 
+#foncion pour verifié si un nombre est premier
+
 def est_premier(n):
     for i in range(2, int(sqrt(n)+1)):
         if n % i == 0 :
             return False
     return True
+
+#fonction pour trouver le nombre premier le plus proche et au dessus de n
 
 def premier_plus_proche(n):
     i = n+1
@@ -50,6 +58,8 @@ def premier_plus_proche(n):
             return i
         else:
             i = i + 1
+
+# fonction de l'épreuve mathématiques
 
 def epreuve_maths_premier():
     import random
@@ -98,6 +108,5 @@ def epreuve_roulette_mathematique():
         return False
 
 #fin epreuve roulette mathématique
-
 
 print(epreuves_mathematiques())
