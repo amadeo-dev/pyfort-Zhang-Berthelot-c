@@ -1,5 +1,5 @@
 
-def maths():
+def epreuve_maths():
     pass
 
 def hasard():
