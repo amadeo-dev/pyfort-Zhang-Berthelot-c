@@ -62,4 +62,4 @@ def epreuve_maths_premier():
         return False
 
 # fin epreuve maths premier
-
+print(epreuve_maths_premier())
