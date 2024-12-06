@@ -3,7 +3,7 @@ from math import *
 import random
 
 def epreuves_mathematiques():
-    epreuves = [epreuve_maths_factorielle,epreuve_maths_premier]
+    epreuves = [epreuve_maths_factorielle,epreuve_maths_premier,epreuve_roulette_mathematique]
     epreuve = random.choice(epreuves)
     return epreuve()
 
@@ -79,17 +79,17 @@ def epreuve_roulette_mathematique():
     e = random.randint(1,20)
 
     if operation == 1:
-        op = addition
+        op = "addition"
         reponse = a+b+c+d+e
     elif operation == 2:
-        op = soustraction
+        op = "soustraction"
         reponse = a-b-c-d-e
     elif operation == 3:
-        op = multiplication
+        op = "multiplication"
         reponse = a*b*c*d*e
-    print("Nombres sur la roulette : ["a,"," b,"," c,"," d,"," e "]")
-    reponse_joueur = int(input(("Calculez le résultat en combinant ces nombres avec une ",op)
-    print("Votre réponses est : ", reponse_joueur)
+    print("Nombres sur la roulette : [",a,",",b,",",c,",",d,",",e,"]")
+    reponse_joueur = int(input(f"Calculez le résultat en combinant ces nombres avec une {op} :"))
+    print("Votre réponse est : ",reponse_joueur)
     if reponse_joueur == reponse:
         print("Bonne réponse ! Vous avez gagné une clé. ")
         return True
@@ -97,14 +97,7 @@ def epreuve_roulette_mathematique():
         print("Mauvaise réponse ! Vous avez perdu l'épreuve.")
         return False
 
-
-
-
-
-
-
-
-
 #fin epreuve roulette mathématique
+
 
 print(epreuves_mathematiques())
