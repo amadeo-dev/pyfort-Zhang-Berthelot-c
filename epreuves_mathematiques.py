@@ -33,8 +33,8 @@ def epreuve_maths_factorielle():
 # debut epreuve premier
 
 def est_premier(n):
-    for i in range(1, sqrt(n)+1):
-        if n % i == 0:
+    for i in range(2, int(sqrt(n)+1)):
+        if n % i == 0 :
             return False
     return True
 
@@ -44,8 +44,9 @@ def premier_plus_proche(n):
     while a == False :
         a = est_premier(i)
         if a == True:
-            return True
+            return i
         else:
-            i += 1
+            i = i + 1
 
 
+# fin epreuve maths premier
