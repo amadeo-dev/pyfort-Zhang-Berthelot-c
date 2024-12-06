@@ -1,7 +1,10 @@
 from math import *
 import random
+
 def epreuve_maths():
     pass
+
+# debut épreuve maths factorielle
 
 def factorielle(n):
     a = 1
@@ -24,4 +27,25 @@ def epreuve_maths_factorielle():
         print("Votre réponse est :", d)
         print("Incorrect ! Vous avez raté l'épreuve de mathématiques.")
         return False
+
+# fin épreuve maths factorielle
+
+# debut epreuve premier
+
+def est_premier(n):
+    for i in range(1, sqrt(n)+1):
+        if n % i == 0:
+            return False
+    return True
+
+def premier_plus_proche(n):
+    i = n+1
+    a = False
+    while a == False :
+        a = est_premier(i)
+        if a == True:
+            return True
+        else:
+            i += 1
+
 
