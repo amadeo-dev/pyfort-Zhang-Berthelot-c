@@ -1,3 +1,4 @@
+from http.client import responses
 from math import *
 import random
 
@@ -69,6 +70,38 @@ def epreuve_maths_premier():
 # début epreuve roulette mathématique
 
 def epreuve_roulette_mathematique():
+    import random
+    operation = random.randint(1,3)
+    a = random.randint(1,20)
+    b = random.randint(1,20)
+    c = random.randint(1,20)
+    d = random.randint(1,20)
+    e = random.randint(1,20)
+
+    if operation == 1:
+        op = addition
+        reponse = a+b+c+d+e
+    elif operation == 2:
+        op = soustraction
+        reponse = a-b-c-d-e
+    elif operation == 3:
+        op = multiplication
+        reponse = a*b*c*d*e
+    print("Nombres sur la roulette : ["a,"," b,"," c,"," d,"," e "]")
+    reponse_joueur = int(input(("Calculez le résultat en combinant ces nombres avec une ",op)
+    print("Votre réponses est : ", reponse_joueur)
+    if reponse_joueur == reponse:
+        print("Bonne réponse ! Vous avez gagné une clé. ")
+        return True
+    else :
+        print("Mauvaise réponse ! Vous avez perdu l'épreuve.")
+        return False
+
+
+
+
+
+
 
 
 
