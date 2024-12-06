@@ -1,5 +1,7 @@
-def epreuve_maths():
-    pass
+def epreuves_mathematiques():
+    epreuves = (factorielle,jeu_lance_des)
+    epreuve = random.choice(epreuves)
+    epreuve()
 
 def factorielle(n):
     a = 1
