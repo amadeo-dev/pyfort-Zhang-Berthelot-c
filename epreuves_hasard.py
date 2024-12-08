@@ -14,7 +14,7 @@ def bonneteau():
     while tentative > 0:
         bonnet = random.choice(li)
         print("Il vous reste", tentative, "essais")
-        test = input("Choisir un bonneteau :").upper
+        test = input("Choisir un bonneteau :").upper()
         if test in li:
             if test == bonnet:
                 print("La clé a été trouvée sous le bonneteau")
