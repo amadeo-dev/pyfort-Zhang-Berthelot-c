@@ -6,13 +6,13 @@ def suiv(joueur):
     if joueur == 1:
         return 0
 
-
 def grille_vide():
     return [[" " for i in range(3)] for i in range(3)]
 
 
 def affiche_grille(grille, message):
     print(message)
+    print("Rappel de l'historique des tirs que vous avez effectués :")
     for ligne in grille:
         print("| " + " | ".join(ligne) + " |")
     print("-" * 10)
@@ -44,6 +44,7 @@ def init():
 def tour(joueur, grille_tirs_joueur, grille_adversaire):
     if joueur == 0:
         affiche_grille(grille_tirs_joueur, "C'est à votre tour de faire feu !:")
+
         tirl, tirc = demande_position()
         if grille_adversaire[tirl][tirc] == 'B':
             grille_tirs_joueur[tirl][tirc] = 'x'
@@ -58,9 +59,11 @@ def tour(joueur, grille_tirs_joueur, grille_adversaire):
 
 def gagne(grille_tirs_joueur):
     wincompte = 0
-    for i in grille_tirs_joueur:
-        if grille_tirs_joueur[i] == 'x':
-            wincompte += 1
+    wincompte = 0
+    for ligne in grille_tirs_joueur:
+        for case in ligne:
+            if case == 'x':
+                wincompte += 1
     if wincompte == 2:
         return True
     if wincompte < 2:
@@ -69,6 +72,21 @@ def gagne(grille_tirs_joueur):
 def jeu_bataille_navale():
     print("Chaque joueur doit placer 2 bateaux sur une grille de 3x3.")
     init()
+    grille_joueur, grille_maitre = grille_vide(), grille_vide()
+    grille_tirs_joueur = grille_tirs_maitre = grille_vide()
+
+    grille_maitre[random.randint(0, 2)][random.randint(0, 2)] = 'B'
+    grille_maitre[random.randint(0, 2)][random.randint(0, 2)] = 'B'
+    joueur = 0
+
+    while True:
+        tour(joueur,grille_tirs_joueur, grille_maitre)
+
+        if gagne(grille_tirs_joueur) == True:
+            print("Le joueur a gagné !")
+            return True
+        joueur =suiv(joueur)
+
 
 
 print(jeu_bataille_navale())
