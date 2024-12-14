@@ -77,15 +77,15 @@ def jeu_bataille_navale():
 
     grille_maitre[random.randint(0, 2)][random.randint(0, 2)] = 'B'
     grille_maitre[random.randint(0, 2)][random.randint(0, 2)] = 'B'
-    joueur = 0
 
+    joueur = 0
     while True:
         tour(joueur,grille_tirs_joueur, grille_maitre)
 
         if gagne(grille_tirs_joueur) == True:
             print("Le joueur a gagné !")
             return True
-        joueur =suiv(joueur)
+        joueur = suiv(joueur)
 
 
 
