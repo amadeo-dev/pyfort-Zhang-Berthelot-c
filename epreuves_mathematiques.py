@@ -2,6 +2,9 @@
 from math import *
 import random
 
+# fonction pour choisir l'épreuve de façon aléatoire,
+# elle renvoie le nom de la fonction a appeler
+
 def epreuves_mathematiques():
     epreuves = [epreuve_maths_factorielle,epreuve_maths_premier,epreuve_roulette_mathematique]
     epreuve = random.choice(epreuves)
@@ -18,7 +21,8 @@ def factorielle(n):
         n = a
     return n
 
-# fonction de l'epreuve factorielle de mathematique
+# fonction de l'epreuve factorielle de mathematique qui
+# renvoie vrai ou faux si l'utilisateur arrive a trouvé la factorielle de n
 
 def epreuve_maths_factorielle():
     c = 0
@@ -59,7 +63,7 @@ def premier_plus_proche(n):
         else:
             i = i + 1
 
-# fonction de l'épreuve mathématiques
+# fonction de l'épreuve mathématiques premier qui renvoie faux
 
 def epreuve_maths_premier():
     import random
@@ -77,7 +81,9 @@ def epreuve_maths_premier():
 
 # fin epreuve maths premier
 
-# début epreuve roulette mathématique
+# début epreuve roulette mathématique,
+# la fonction choisit une opération mathématiques et 5 chiffres aléatoirement et
+# demande a l'utilisateur de calculer l'opération des 5 chiffres.
 
 def epreuve_roulette_mathematique():
     import random
