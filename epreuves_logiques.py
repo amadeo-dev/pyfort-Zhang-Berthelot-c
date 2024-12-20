@@ -35,9 +35,14 @@ def init():
     bateau1 = demande_position()
     grille[bateau1[0]][bateau1[1]] = 'B'
 
-    print("Bateau 2")
-    bateau2 = demande_position() #faut pas que le deuxième bateau soit sur la même position que le premier
-    grille[bateau2[0]][bateau2[1]] = 'B'
+    while True:
+        print("Bateau 2")
+        bateau2 = demande_position()
+        if bateau2 == bateau1:
+            print("Position déjà occupée, veuillez choisir une autre position.")
+        else:
+            grille[bateau2[0]][bateau2[1]] = 'B'
+            break
 
     affiche_grille(grille, "Découvrez votre grille de jeu avec vos bateaux :")
 
@@ -82,8 +87,13 @@ def jeu_bataille_navale():
     grille_moi, grille_maitre = grille_vide(), grille_vide()
     grille_tirs_moi, grille_tirs_maitre = grille_vide(), grille_vide()
 
-    grille_maitre[random.randint(0, 2)][random.randint(0, 2)] = 'B'
-    grille_maitre[random.randint(0, 2)][random.randint(0, 2)] = 'B'
+    while True:
+        bateau1 = (random.randint(0, 2), random.randint(0, 2))
+        bateau2 = (random.randint(0, 2), random.randint(0, 2))
+        if bateau1 != bateau2:
+            break
+    grille_maitre[bateau1[0]][bateau1[1]] = 'B'
+    grille_maitre[bateau2[0]][bateau2[1]] = 'B'
 
     joueur = 0
     while True:
