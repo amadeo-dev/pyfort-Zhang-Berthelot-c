@@ -15,7 +15,7 @@ def affiche_grille(grille, message):
     print(message)
     for ligne in grille:
         print("| " + " | ".join(ligne) + " |")
-    print("-" * 10)
+    print("-" * 15)
 
 
 def demande_position():
@@ -109,5 +109,5 @@ def jeu_bataille_navale():
         joueur = suiv(joueur)
 
 
-
 print(jeu_bataille_navale())
+
