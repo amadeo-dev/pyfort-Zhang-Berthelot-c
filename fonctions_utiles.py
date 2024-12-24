@@ -19,13 +19,16 @@ def composer_equipe():
                        'cles_gagnees': 0 }
         li_joueurs.append(new_joueur)
 
-    isleader = False
+    isleader = 0
     for i in range(len(li_joueurs)):
         if li_joueurs[i]['leader'] == 'o':
-            isleader = True
-    if isleader == False:
-        li_joueurs[1]['leader'] = 'o'
-
+            isleader += 1
+    if isleader == 0:
+        li_joueurs[0]['leader'] = 'o'
+    elif isleader > 1:
+        for i in range(len(li_joueurs)):
+            li_joueurs[i]['leader'] = 'n'
+            li_joueurs[0]['leader'] = 'o'
     return li_joueurs
 
 def menu_epreuves():
@@ -33,13 +36,13 @@ def menu_epreuves():
     return int(input("Choix: "))
 
 def choisir_joueur(equipe):
-    for i in range(1,len(equipe)+1):
+    for i in range(len(equipe)):
         if equipe[i]['leader'] == 'o':
             lead = 'Leader'
         else:
             lead = 'Membre'
 
-        print("{}. {} ({}) - {}".format(i,equipe[i]['nom'],equipe[i]['profession'],lead))
+        print("{}. {} ({}) - {}".format(i+1,equipe[i]['nom'],equipe[i]['profession'],lead))
 
 
 equipe = composer_equipe()
