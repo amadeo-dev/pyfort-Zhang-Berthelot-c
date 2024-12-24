@@ -1,4 +1,4 @@
-def introuduction():
+def introduction():
     print("Bienvenue")
     print("Accomplir des épreuves pour gagner des clés et déverrouiller la salle du trésor.")
     print("L'objectif est de ramasser trois clés pour accéder à la salle du trésor.")
@@ -44,6 +44,3 @@ def choisir_joueur(equipe):
 
         print("{}. {} ({}) - {}".format(i+1,equipe[i]['nom'],equipe[i]['profession'],lead))
 
-
-equipe = composer_equipe()
-print(choisir_joueur(equipe))
