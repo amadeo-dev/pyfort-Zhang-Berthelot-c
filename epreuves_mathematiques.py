@@ -114,4 +114,3 @@ def epreuve_roulette_mathematique():
 
 #fin epreuve roulette mathématique
 
-print(epreuves_mathematiques())

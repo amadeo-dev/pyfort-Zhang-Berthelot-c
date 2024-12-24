@@ -33,7 +33,8 @@ def composer_equipe():
 
 def menu_epreuves():
     print("1. Épreuve de Mathématiques\n2. Épreuve de Logique\n3. Épreuve du hasard\n4. Énigme du Père Fouras")
-    return int(input("Choix: "))
+    choix = int(input("Choix: "))
+    return choix
 
 def choisir_joueur(equipe):
     for i in range(len(equipe)):

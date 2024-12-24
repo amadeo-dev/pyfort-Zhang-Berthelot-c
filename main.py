@@ -5,23 +5,32 @@ from epreuves_hasard import *
 from epreuves_mathematiques import epreuves_mathematiques
 from fonctions_utiles import *
 
-cles = 0
 
 def jeu():
     introduction()
     ekip = composer_equipe()
+    cles = 0
+
+
     while cles < 3:
         epreuve_choisi = menu_epreuves()
         choisir_joueur(ekip)
         if epreuve_choisi == '1':
-            epreuves_mathematiques()
+            epreuve_choisi = epreuves_mathematiques()
         if epreuve_choisi == '2':
-            epreuves_logiques()
+            epreuve_choisi = jeu_bataille_navale()
         if epreuve_choisi == '3':
-            epreuves_hasard()
+            epreuve_choisi = epreuves_hasard()
         if epreuve_choisi == '4':
-            enigme_pere_fouras()
+            epreuve_choisi = enigme_pere_fouras()
 
+        elif epreuve_choisi == True:
+            cles += 1
 
-if __name__ == "__main__":
-    jeu()
+    final = salle_De_Tresor()
+    if final == True:
+        "L'équipe remporte"
+    else:
+        "L'équipe perd"
+
+jeu()

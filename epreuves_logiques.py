@@ -108,6 +108,3 @@ def jeu_bataille_navale():
 
         joueur = suiv(joueur)
 
-
-print(jeu_bataille_navale())
-

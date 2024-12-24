@@ -44,4 +44,3 @@ def salle_De_Tresor():
     else :
         print("Vous avez perdu !")
 
-print(salle_De_Tresor())
