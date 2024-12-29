@@ -50,4 +50,3 @@ def salle_De_Tresor():
     else :
         print("Vous avez perdu !")
 
-salle_De_Tresor()
