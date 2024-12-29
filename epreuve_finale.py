@@ -12,35 +12,42 @@ def salle_De_Tresor():
 
     # integrer le fichier .json en une liste de dico
 
-    fichier = open("data/indicesSalle.json","r")
-    jeu_tv = json.load(fichier)
-    fichier.close()
+    with open("data/indicesSalle.json", "r") as fichier:
+        jeu_tv = json.load(fichier)
 
-    annee = random.choice(jeu_tv["annee"])
-    emission = random.choice(annee["emission"])
-    indice = emission["indice"]
-    mot_code = emission["mot_code"]
+    fort_boyard = jeu_tv["Fort Boyard"]
+    annees = list(fort_boyard.keys())
+    annee = random.choice(annees)
+    emissions = fort_boyard[annee]
+    emission_nom = random.choice(list(emissions.keys()))
+    emission = emissions[emission_nom]
+    indice = emission["Indices"]
+    mot_code = emission["MOT-CODE"]
 
-    print(indice[0],indice[1],indice[2])
+    print("Les indices sont :",indice[0],indice[1],indice[2])
 
     j = 2 # il va etre utiliser pour les indices
     essais = 3
 
     while essais > 0 :
         reponse_joueur = input("Saisir la réponse : ")
-        if mot_code == reponse_joueur:
+        mot_code_mini = mot_code.lower()
+        reponse_joueur_mini = reponse_joueur.lower()
+        if mot_code_mini == reponse_joueur_mini :
             reponse_correct = True
             break
         else :
+            essais -= 1
             if essais > 0:
-                essais -= 1
                 j += 1
-                print(indice[j])
+                print("Il vous reste", essais, "essais")
+                print("Le prochain indice est", indice[j])
             else :
-                print(mot_code)
+                print("La réponse était :", mot_code)
 
     if reponse_correct == True :
         print("Vous avez gagné !")
     else :
         print("Vous avez perdu !")
 
+salle_De_Tresor()
