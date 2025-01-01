@@ -15,13 +15,13 @@ def jeu():
     while cles < 3:
         epreuve_choisi = menu_epreuves()
         choisir_joueur(ekip)
-        if epreuve_choisi == '1':
+        if epreuve_choisi == 1:
             epreuve_choisi = epreuves_mathematiques()
-        if epreuve_choisi == '2':
+        if epreuve_choisi == 2:
             epreuve_choisi = jeu_bataille_navale()
-        if epreuve_choisi == '3':
+        if epreuve_choisi == 3:
             epreuve_choisi = epreuves_hasard()
-        if epreuve_choisi == '4':
+        if epreuve_choisi == 4:
             epreuve_choisi = enigme_pere_fouras()
 
         elif epreuve_choisi == True:
