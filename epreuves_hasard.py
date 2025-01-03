@@ -50,4 +50,3 @@ def jeu_lance_des():
     print("Personne n'a emporté la partie")
     return False
 
-print(epreuves_hasard())
