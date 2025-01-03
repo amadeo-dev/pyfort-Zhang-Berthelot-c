@@ -3,7 +3,7 @@ import random
 
 def salle_De_Tresor():
 
-    #variable
+    # on pose les variables
 
     jeu_tv, emission = {},{}
     annee, mot_code = "", ""
@@ -14,6 +14,8 @@ def salle_De_Tresor():
 
     with open("data/indicesSalle.json", "r") as fichier:
         jeu_tv = json.load(fichier)
+
+#permet de choisir l'énigme de façon aléatoire
 
     fort_boyard = jeu_tv["Fort Boyard"]
     annees = list(fort_boyard.keys())
@@ -28,6 +30,9 @@ def salle_De_Tresor():
 
     j = 2 # il va etre utiliser pour les indices
     essais = 3
+
+# permet a l'utilisateur de répondre et de voir s'il a bon, s'il trouve la bonne réponse,
+# réponse_correct = True
 
     while essais > 0 :
         reponse_joueur = input("Saisir la réponse : ")
@@ -44,6 +49,8 @@ def salle_De_Tresor():
                 print("Le prochain indice est", indice[j])
             else :
                 print("La réponse était :", mot_code)
+
+#affiche si il a gagné ou perdu
 
     if reponse_correct == True :
         print("Vous avez gagné !")
