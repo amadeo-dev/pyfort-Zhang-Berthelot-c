@@ -31,9 +31,13 @@ ouvrir le cmd (ou terminal)
 git clone https://github.com/amadeo-dev/pyfort-Zhang-Berthelot-c.git
 cd Fort-Boyard-Simulator
 
-## 2. DocumentationTechnique o 
+## 2. DocumentationTechnique
 ###Algorithme du jeu :
-§ Présentezl'algorithmequevousavezdéveloppépourleprojetenincluant chaque étape sous forme de liste numérotée.
+Une fontion principale (main.py) gère le déroulement du jeu :
+- 1. Elle demande de composer une équime de max 3 personnes
+- 2. Demande le nom, profession et role de chaque joueur
+- 3. Demande quel epreuve le joueur souhaite réaliser et la lance
+- 4. Elle comptabilise combien de clés ont étés récoltées
 ### Détails des fonctions implémentées :
 
 § Fournissez la liste des prototypes des fonctions, accompagnée
