@@ -56,9 +56,11 @@ Le code est conçu pour gérer les entrées utilisateur avec robustesse :
 ### Chronologie du Projet :
 On a avancé à notre rythme pendant les séances de projet python, pas de problèmes rencontrés
 
-###Répartition des Tâches:
+### Répartition des Tâches:
  Nous nous sommes répartis le travail en plusieurs taches, pour plus de simplicité nous avons chacun réaliser 2 ou 3 mini-jeux en plus duquel on a fait soit la fonction_utiles soit la main fonction.
-4. TestsetValidation
-o Stratégies de Test :
-§ Casdetestspécifiquesetrésultats.
+## 4. Tests et Validation
+### Stratégies de Test :
+On a tester séparement chaque fonction au fur et à mesure, et une fois le projet finalisé c'est l'ensemble du jeu que nous avons finaliser.  
+Pour accélerer le processus de test nous remplacions directement les 'input' par une valeur
+
 § Capturesd'écranmontrantlestestsenaction.
