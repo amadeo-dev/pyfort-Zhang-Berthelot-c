@@ -52,7 +52,7 @@ def init():
     affiche_grille(grille, "Découvrez votre grille de jeu avec vos bateaux :")
 
 def tour(joueur, grille_tirs_joueur, grille_adversaire):
-    if joueur == 0:
+    if joueur == 0:  # gère le tour du joueur avec des input
         print("C'est à votre tour de faire feu !:")
         affiche_grille(grille_tirs_joueur, "Rappel de l'historique des tirs que vous avez effectués :")
         tirl, tirc = demande_position()
@@ -64,7 +64,7 @@ def tour(joueur, grille_tirs_joueur, grille_adversaire):
             print("Dans l'eau...")
 
     if joueur == 1:
-        print("\nC'est le tour du maître du jeu :")
+        print("\nC'est le tour du maître du jeu :")  # gère le tour du maître du jeu avec des positions générées aléatoirement
         tirl, tirc = random.randint(0,2), random.randint(0,2)
         print('Le maître du jeu tire en position', tirl+1, ',', tirc+1)
         if grille_adversaire[tirl][tirc] == 'B':
@@ -76,6 +76,7 @@ def tour(joueur, grille_tirs_joueur, grille_adversaire):
             print("Dans l'eau...")
 
 def gagne(grille_tirs_joueur):
+    """Fonction vérifiant si le joueur a gagné (si il a coulé 2 bateaux)"""
     wincompte = 0
     wincompte = 0
     for ligne in grille_tirs_joueur:
@@ -88,6 +89,7 @@ def gagne(grille_tirs_joueur):
         return False
 
 def jeu_bataille_navale():
+    """Fonction s'occupant du déroulement de la partie"""
     print("Chaque joueur doit placer 2 bateaux sur une grille de 3x3.")
     init()
     grille_moi, grille_maitre = grille_vide(), grille_vide()
