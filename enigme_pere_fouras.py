@@ -1,7 +1,10 @@
+# Projet EFREI TI101 - Programmation en Python / Jacky
+# fichier qui représente l'épreuve enigme du père fouras
+
 import json
 import random
 
-#fonction qui permet de changer un fichier .json en une liste de dictionnaire
+#fonction qui permet de changer un fichier .json en une liste de dictionnaire et le renvoie
 def charger_enigmes(fichier):
     enigmes = open(fichier,'r')
     liste_dico_enigmes = json.load(enigmes)
@@ -10,6 +13,7 @@ def charger_enigmes(fichier):
 
 #fonction qui fait faire une énigme a l'utilisateur et
 # qui renvoie true si il trouve la bonne réponse et false s'il le trouve pas
+
 def enigme_pere_fouras():
 
     #variable utilisé
@@ -22,7 +26,7 @@ def enigme_pere_fouras():
 
     liste_dico_enigmes = charger_enigmes("data/enigmesPF.json")
     enigmes1 = random.choice(liste_dico_enigmes)
-    print(enigmes1["question"])
+    print(enigmes1["question"])Ò
     while essais > 0 :
         reponse = input("Saisir la réponse : ")
         reponse_miniscule = reponse.lower()

@@ -1,3 +1,6 @@
+#Projet EFREI TI101 - Programmation en Python / Jacky
+# fichier qui represente les épreuves mathématiques
+
 from math import *
 import random
 
@@ -26,9 +29,11 @@ def factorielle(n):
 def epreuve_maths_factorielle():
     c = 0
     import random
-    n = random.randint(1,10)
+    n = random.randint(1,10) # choisis un nombre aléatoire entre 1 et 10
     c = factorielle(n)
     d = int(input(f"Épreuve de Mathématiques: Calculer la factorielle de {n} : "))
+
+    # indiique a l'utilisateur si il a faux ou vrai et lui renvoie
     if c == d:
         print("Votre réponse :", d)
         print("Correct ! Vous gagnez une clé.")
@@ -62,11 +67,12 @@ def premier_plus_proche(n):
         else:
             i = i + 1
 
-# fonction de l'épreuve mathématiques premier qui renvoie faux
+# fonction de l'épreuve mathématiques premier qui renvoie faux ou vrai
+# si l'utilisateur trouve le nombre premier le plus proche du nombre choisis
 
 def epreuve_maths_premier():
     import random
-    n = random.randint(10,20)
+    n = random.randint(10,20) # choisis un nombre aléatoire entre 10 et 20
     a = int(input(f"Épreuve de Mathématiques: Trouver le nombre premier le plus proche de {n} : "))
     b = premier_plus_proche(n)
     if a == b :
@@ -83,6 +89,7 @@ def epreuve_maths_premier():
 # début epreuve roulette mathématique,
 # la fonction choisit une opération mathématiques et 5 chiffres aléatoirement et
 # demande a l'utilisateur de calculer l'opération des 5 chiffres.
+#renvoie vrai ou faux si l'utilisateur trouve la réponse de l'opération
 
 def epreuve_roulette_mathematique():
     import random
