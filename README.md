@@ -18,7 +18,7 @@ Pour un projet d’école en programmation Python, on a créé un mini-jeu inspi
 ### Technologies Utilisées
 - *Langages de programmation : Python 
 - *Bibliothèques : time, random, json et math
-- **Outils :pyCharm, github
+- *Outils :pyCharm, github
 
 ### Installation
 
@@ -28,26 +28,26 @@ Python 3.9+, pip
 #### Instructions pour cloner le dépôt Git
 ouvrir le cmd (ou terminal)
 
-git clone https://github.com/amadeo-dev/pyfort-Zhang-Berthelot-c.git
+git clone https://github.com/amadeo-dev/pyfort-Zhang-Berthelot-c.git  
+
 cd Fort-Boyard-Simulator
 
-## 2. DocumentationTechnique
-###Algorithme du jeu :
+## 2. Documentation Technique
+### Algorithme du jeu :
 Une fontion principale (main.py) gère le déroulement du jeu :
-- 1. Elle demande de composer une équime de max 3 personnes
-- 2. Demande le nom, profession et role de chaque joueur
-- 3. Demande quel epreuve le joueur souhaite réaliser et la lance
-- 4. Elle comptabilise combien de clés ont étés récoltées
+1. Elle demande de composer une équime de max 3 personnes
+2. Demande le nom, profession et role de chaque joueur
+3. Demande quel epreuve le joueur souhaite réaliser et la lance
+4. Elle comptabilise combien de clés ont étés récoltées et si les joueurs sont victorieux
+   
 ### Détails des fonctions implémentées :
 
 § Fournissez la liste des prototypes des fonctions, accompagnée
 d'explications brèves sur leur rôle et de descriptions des paramètres.
 ###Gestion des Entrées et Erreurs :
-§ Décrivez comment le code traite les valeurs et les intervalles, ainsi que
-les méthodes mises en place pour gérer les erreurs potentielles.
-§ Fournissezunelistedesbugsconnus.
-
-## 3. JournaldeBord
+Le code est conçu pour gérer les entrées utilisateur avec robustesse :
+	•	Les choix de menu et saisies des joueurs sont validés pour éviter les entrées incorrectes. Par exemple, le menu des épreuves refuse tout choix en dehors des options disponibles.
+	•	Pour les jeux nécessitant des positions (comme le morpion), les entrées sont vérifiées pour s’assurer qu’elles sont dans les limites autorisées.
 
 ### Chronologie du Projet :
 On a avancé à notre rythme pendant les séances de projet python, pas de problèmes rencontrés
