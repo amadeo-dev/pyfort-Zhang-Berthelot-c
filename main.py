@@ -8,10 +8,10 @@ from fonctions_utiles import *
 
 def jeu():
     introduction()
-    ekip = composer_equipe()
-    cles = 0
+    ekip = composer_equipe()    #présentation et crétion des équipes
+    cles = 0                    # initialisation du nombre de clés à 0
 
-    while cles < 3:
+    while cles < 3:             # On répète tant que l'équipe n'a pas trois clés
         epreuve_choisi = menu_epreuves()
         joueur_choisi = choisir_joueur(ekip)
 
@@ -28,7 +28,7 @@ def jeu():
             joueur_choisi['cles_gagnees'] += 1
             cles += 1
 
-    final = salle_De_Tresor()
+    final = salle_De_Tresor()  # une fois les 3 clés obtenues -> salle tresor
     if final == True:
         "L'équipe remporte"
     else:
