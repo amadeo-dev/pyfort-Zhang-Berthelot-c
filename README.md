@@ -1,4 +1,5 @@
 # Fort Boyard Game
+Fort Boyard Simulator 
 Projet EFREI TI101 - Programmation en Python
 
 ## 1. Présentation Générale
