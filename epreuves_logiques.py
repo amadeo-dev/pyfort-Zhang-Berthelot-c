@@ -23,10 +23,9 @@ def demande_position():
         position = input("Entrez la position (ligne,colonne) entre 1 et 3 (ex: 1,2) : ")
         if "," in position:
             ligne, colonne = position.split(',')
-            if ligne.isdigit() and colonne.isdigit():
-                ligne, colonne = int(ligne), int(colonne)
-                if 1 <= ligne <= 3 and 1 <= colonne <= 3:
-                    return ligne - 1, colonne - 1
+            ligne, colonne = int(ligne), int(colonne)
+            if 1 <= ligne <= 3 and 1 <= colonne <= 3:
+                return ligne - 1, colonne - 1
         print("Position invalide !")
 
 
