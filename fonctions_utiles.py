@@ -1,3 +1,8 @@
+# Projet EFREI TI101 - Programmation en Python
+# Fort Boyard Simulator  / Amadéo
+# Fichier qui représente les fonctions utiles tel que :
+# la composition de l'équipe, le menu des épreuves...
+
 def introduction():
     print("Bienvenue")
     print("Accomplir des épreuves pour gagner des clés et déverrouiller la salle du trésor.")

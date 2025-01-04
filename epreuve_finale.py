@@ -1,5 +1,6 @@
-# Projet EFREI TI101 - Programmation en Python / Jacky
-# fichier qui représente l'épreuve finale
+# Projet EFREI TI101 - Programmation en Python
+# Fort Boyard Simulator  / Jacky
+# Fichier qui représente l'épreuve finale
 
 import json
 import random

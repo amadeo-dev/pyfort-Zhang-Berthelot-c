@@ -1,5 +1,6 @@
-# Projet EFREI TI101 - Programmation en Python / Jacky
-# fichier qui représente l'épreuve enigme du père fouras
+# Projet EFREI TI101 - Programmation en Python
+# Fort Boyard Simulator / Jacky
+# Fichier qui représente l'épreuve enigme du père fouras
 
 import json
 import random
@@ -16,7 +17,7 @@ def charger_enigmes(fichier):
 
 def enigme_pere_fouras():
 
-    #variable utilisé
+ #variable utilisé
 
     liste_dico_enigmes = []
     enigmes1 = {}

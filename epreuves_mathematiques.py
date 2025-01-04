@@ -1,5 +1,6 @@
-#Projet EFREI TI101 - Programmation en Python / Jacky
-# fichier qui represente les épreuves mathématiques
+#Projet EFREI TI101 - Programmation en Python
+# Fort Boyard Simulator / Jacky
+# Fichier qui represente les épreuves mathématiques
 
 from math import *
 import random

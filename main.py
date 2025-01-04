@@ -1,3 +1,7 @@
+# Projet EFREI TI101 - Programmation en Python
+# Fort Boyard Simulator  / Amadéo
+# Fichier qui represente le fichier principal dans lequel l'utilisateur va jouer
+
 from enigme_pere_fouras import *
 from epreuves_logiques import *
 from epreuve_finale import *

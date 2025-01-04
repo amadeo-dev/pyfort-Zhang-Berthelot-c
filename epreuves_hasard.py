@@ -1,3 +1,7 @@
+# Projet EFREI TI101 - Programmation en Python
+# Fort Boyard Simulator  / Amadéo
+# Fichier qui represente les épreuves d'hasard
+
 import random
 
 def epreuves_hasard():
