@@ -14,7 +14,7 @@ def jeu():
     while cles < 3:
         epreuve_choisi = menu_epreuves()
         joueur_choisi = choisir_joueur(ekip)
-        print(joueur_choisi)
+
         if epreuve_choisi == 1:
             epreuve_choisi = epreuves_mathematiques()
         if epreuve_choisi == 2:
@@ -25,6 +25,7 @@ def jeu():
             epreuve_choisi = enigme_pere_fouras()
 
         elif epreuve_choisi == True:
+            joueur_choisi['cles_gagnees'] += 1
             cles += 1
 
     final = salle_De_Tresor()
