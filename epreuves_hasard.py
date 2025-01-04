@@ -1,6 +1,7 @@
 import random
 
 def epreuves_hasard():
+    """fontion choisissant au hasard parmi les jeux proposés dans la section des épreuves de hasard"""
     epreuves = [bonneteau, jeu_lance_des]
     epreuve = random.choice(epreuves)
     return epreuve()
@@ -11,11 +12,11 @@ def bonneteau():
         "Bienvenue au jeu du bonneteau ! Devinez sous quel bonneteau (A, B ou C) se cache la clé. Vous avez deux essais, bonne chance !")
     li = ('A','B','C')
     tentative = 2
-    while tentative > 0:
+    while tentative > 0:    # Boucle qui se repete 2 fois (nbr tentatives)
         bonnet = random.choice(li)
         print("Il vous reste", tentative, "essais")
-        test = input("Choisir un bonneteau :").upper()
-        if test in li:
+        test = input("Choisir un bonneteau :").upper()   # demande et met en majuscule
+        if test in li:                                   # vérifie si joueur a trouvé
             if test == bonnet:
                 print("La clé a été trouvée sous le bonneteau")
                 return True

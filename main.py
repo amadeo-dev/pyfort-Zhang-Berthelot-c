@@ -13,7 +13,8 @@ def jeu():
 
     while cles < 3:
         epreuve_choisi = menu_epreuves()
-        choisir_joueur(ekip)
+        joueur_choisi = choisir_joueur(ekip)
+        print(joueur_choisi)
         if epreuve_choisi == 1:
             epreuve_choisi = epreuves_mathematiques()
         if epreuve_choisi == 2:

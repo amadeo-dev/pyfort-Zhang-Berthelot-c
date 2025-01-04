@@ -21,7 +21,7 @@ Pour un projet d’école en programmation Python, on a créé un mini-jeu inspi
 ### Technologies Utilisées
 - *Langages de programmation : Python 
 - *Bibliothèques : time, random, json et math
-- **Outils :pyCharm, github
+- *Outils :pyCharm, github
 
 ### Installation
 
