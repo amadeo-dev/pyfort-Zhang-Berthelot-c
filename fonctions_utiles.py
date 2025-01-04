@@ -8,8 +8,8 @@ def composer_equipe():
     li_joueurs = []
 
     while nbr_joueurs > 3:
-        nbr_joueurs = int(input("Combien voulez vous inscrire de joueurs (max 3):"))
-        if nbr_joueurs > 3:
+        nbr_joueurs = int(input("Combien voulez vous inscrire de joueurs (max 3) : "))
+        if nbr_joueurs > 3 or nbr_joueurs <= 0:
             print("Erreur")
 
     for i in range(nbr_joueurs):
@@ -32,16 +32,18 @@ def composer_equipe():
     return li_joueurs
 
 def menu_epreuves():
-    print("1. Épreuve de Mathématiques\n2. Épreuve de Logique\n3. Épreuve du hasard\n4. Énigme du Père Fouras")
+    print("\n1. Épreuve de Mathématiques\n2. Épreuve de Logique\n3. Épreuve du hasard\n4. Énigme du Père Fouras")
     choix = int(input("Choix: "))
     return choix
 
 def choisir_joueur(equipe):
+    print('\n')
     for i in range(len(equipe)):
         if equipe[i]['leader'] == 'o':
             lead = 'Leader'
         else:
             lead = 'Membre'
-
         print("{}. {} ({}) - {}".format(i+1,equipe[i]['nom'],equipe[i]['profession'],lead))
+    choix = int(input("Choix: "))
+    return equipe[choix-1]
 

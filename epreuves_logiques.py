@@ -19,13 +19,14 @@ def affiche_grille(grille, message):
 
 
 def demande_position():
-    position = input("Entrez la position (ligne,colonne) entre 1 et 3 (ex: 1,2) : ")
-    ligne, colonne = position.split(',')
-    ligne, colonne = int(ligne), int(colonne)
-    if 0 < ligne <= 3 and 0 < colonne <= 3:
-        return ligne - 1, colonne - 1
-    else:
-        print("Position invalide")
+    while True:
+        position = input("Entrez la position (ligne,colonne) entre 1 et 3 (ex: 1,2) : ")
+        if "," in position:
+            ligne, colonne = position.split(',')
+            ligne, colonne = int(ligne), int(colonne)
+            if 1 <= ligne <= 3 and 1 <= colonne <= 3:
+                return ligne - 1, colonne - 1
+        print("Position invalide !")
 
 
 def init():
@@ -65,6 +66,7 @@ def tour(joueur, grille_tirs_joueur, grille_adversaire):
         if grille_adversaire[tirl][tirc] == 'B':
             grille_tirs_joueur[tirl][tirc] = 'x'
             print("Touché coulé !")
+            time.sleep(1)
         elif grille_adversaire[tirl][tirc] == ' ':
             grille_tirs_joueur[tirl][tirc] = '.'
             print("Dans l'eau...")
@@ -107,4 +109,3 @@ def jeu_bataille_navale():
             return True
 
         joueur = suiv(joueur)
-
