@@ -40,8 +40,3 @@ def enigme_pere_fouras():
         if essais == 0 :
             print("Le joueur a échoué a résoudre l'énigme.")
             return False
-
-
-
-
-
