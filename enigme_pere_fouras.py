@@ -26,7 +26,7 @@ def enigme_pere_fouras():
 
     liste_dico_enigmes = charger_enigmes("data/enigmesPF.json")
     enigmes1 = random.choice(liste_dico_enigmes)
-    print(enigmes1["question"])Ò
+    print(enigmes1["question"])
     while essais > 0 :
         reponse = input("Saisir la réponse : ")
         reponse_miniscule = reponse.lower()

@@ -6,7 +6,7 @@ import random
 
 #fonction de l'épreuve finale et qui renvoie vrai si l'utilisateur trouve la réponse a l'énigme
 #et faux si l'utilisateur ne trouve pas la réponse en utilisant tous ses essais.
-`
+
 def salle_De_Tresor():
 
     # on pose les variables
