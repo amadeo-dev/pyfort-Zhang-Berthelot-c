@@ -8,13 +8,13 @@ def suiv(joueur):
         return 0
 
 def grille_vide():
-    return [[" " for i in range(3)] for i in range(3)]
+    return [[" " for i in range(3)] for i in range(3)]  #création d'une grille 3x3 en utilisant boucle for
 
 
 def affiche_grille(grille, message):
     print(message)
     for ligne in grille:
-        print("| " + " | ".join(ligne) + " |")
+        print("| " + " | ".join(ligne) + " |")  # on utilise la méthode join pour séparer par des '|' les cases
     print("-" * 15)
 
 
@@ -22,7 +22,7 @@ def demande_position():
     while True:
         position = input("Entrez la position (ligne,colonne) entre 1 et 3 (ex: 1,2) : ")
         if "," in position:
-            ligne, colonne = position.split(',')
+            ligne, colonne = position.split(',') # utilisation de la méthode split pour séparer le tuple position là où il y a une virgule
             ligne, colonne = int(ligne), int(colonne)
             if 1 <= ligne <= 3 and 1 <= colonne <= 3:
                 return ligne - 1, colonne - 1

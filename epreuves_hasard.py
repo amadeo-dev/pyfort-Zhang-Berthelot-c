@@ -33,7 +33,7 @@ def jeu_lance_des():
     while essais > 0:
         print("Il vous reste", essais, "essais")
         input("Appuyez sur Entrée pour lancer les dés...")
-        de1 = (random.randint(1, 6), random.randint(1, 6) )
+        de1 = (random.randint(1, 6), random.randint(1, 6) )  
         print(f"Vous avez obtenu : {de1[0]} et {de1[1]}.")
         for i in de1:
             if i == 6:
