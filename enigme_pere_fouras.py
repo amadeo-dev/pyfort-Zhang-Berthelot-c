@@ -1,7 +1,11 @@
+# Projet EFREI TI101 - Programmation en Python
+# Fort Boyard Simulator / Jacky
+# Fichier qui représente l'épreuve enigme du père fouras
+
 import json
 import random
 
-#fonction qui permet de changer un fichier .json en une liste de dictionnaire
+#fonction qui permet de changer un fichier .json en une liste de dictionnaire et le renvoie
 def charger_enigmes(fichier):
     enigmes = open(fichier,'r')
     liste_dico_enigmes = json.load(enigmes)
@@ -10,9 +14,10 @@ def charger_enigmes(fichier):
 
 #fonction qui fait faire une énigme a l'utilisateur et
 # qui renvoie true si il trouve la bonne réponse et false s'il le trouve pas
+
 def enigme_pere_fouras():
 
-    #variable utilisé
+ #variable utilisé
 
     liste_dico_enigmes = []
     enigmes1 = {}
@@ -36,8 +41,3 @@ def enigme_pere_fouras():
         if essais == 0 :
             print("Le joueur a échoué a résoudre l'énigme.")
             return False
-
-
-
-
-

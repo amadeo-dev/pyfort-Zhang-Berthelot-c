@@ -1,3 +1,7 @@
+# Projet EFREI TI101 - Programmation en Python
+# Fort Boyard Simulator  / Amadéo
+# Fichier qui represente les épreuves d'hasard
+
 import random
 
 def epreuves_hasard():
@@ -6,7 +10,7 @@ def epreuves_hasard():
     epreuve = random.choice(epreuves)
     return epreuve()
 
-
+#fonction qui du jeu bonneauteau et renvoie True s'il a reussi le jeu et False s'il a raté
 def bonneteau():
     print(
         "Bienvenue au jeu du bonneteau ! Devinez sous quel bonneteau (A, B ou C) se cache la clé. Vous avez deux essais, bonne chance !")
@@ -27,6 +31,8 @@ def bonneteau():
         tentative -= 1
     print("Le joueur a perdu, la clé se trouvait sous le bonneteau", bonnet)
     return False
+
+#fonction qui représente le jeu de lancé de dé et renvoie true s'il gagne et false s'il perd
 
 def jeu_lance_des():
     essais = 3

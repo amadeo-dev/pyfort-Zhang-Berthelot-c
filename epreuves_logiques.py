@@ -1,3 +1,7 @@
+# Projet EFREI TI101 - Programmation en Python
+# Fort Boyard Simulator  / Amadéo
+# Fichier qui représente les épreuves logiques
+
 import random
 import time
 
