@@ -42,13 +42,16 @@ Une fontion principale (main.py) gère le déroulement du jeu :
    
 ### Détails des fonctions implémentées :
 
-§ Fournissez la liste des prototypes des fonctions, accompagnée
-d'explications brèves sur leur rôle et de descriptions des paramètres.
-###Gestion des Entrées et Erreurs :
+Le projet se sépare en trois groupe de fonctions :
+- chaque jeu à une fonction qui ne prend rien en parametre mais retourne un bolléen (vrai -> le joueur a gagné et inversement)
+- les fonctions 'utiles', où on retrouve la création d'équipe ainsi que le menu des epreuves 
+- la fonction principale jeu() qui renvoie permet de créer son équipe et choisir l'épreuve et renvoie "L'équipe remporte" ou "L'équipe perd"
+
+### Gestion des Entrées et Erreurs :
 
 Le code est conçu pour gérer les entrées utilisateur avec robustesse :
-	•	Les choix de menu et saisies des joueurs sont validés pour éviter les entrées incorrectes. Par exemple, le menu des épreuves refuse tout choix en dehors des options disponibles.
-	•	Pour les jeux nécessitant des positions (comme le morpion), les entrées sont vérifiées pour s’assurer qu’elles sont dans les limites autorisées.
+* Les choix de menu et saisies des joueurs sont validés pour éviter les entrées incorrectes. Par exemple, le menu des épreuves refuse tout choix en dehors des options disponibles.
+* Pour les jeux nécessitant des positions (comme le morpion), les entrées sont vérifiées pour s’assurer qu’elles sont dans les limites autorisées.
 
 ### Chronologie du Projet :
 On a avancé à notre rythme pendant les séances de projet python, pas de problèmes rencontrés
