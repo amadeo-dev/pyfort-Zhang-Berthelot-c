@@ -1,4 +1,5 @@
 # Fort Boyard Game
+Fort Boyard Simulator 
 Projet EFREI TI101 - Programmation en Python
 
 ## 1. Présentation Générale
@@ -53,6 +54,7 @@ Le code est conçu pour gérer les entrées utilisateur avec robustesse :
 * Les choix de menu et saisies des joueurs sont validés pour éviter les entrées incorrectes. Par exemple, le menu des épreuves refuse tout choix en dehors des options disponibles.
 * Pour les jeux nécessitant des positions (comme le morpion), les entrées sont vérifiées pour s’assurer qu’elles sont dans les limites autorisées.
 
+## 3. Journal de Bord
 ### Chronologie du Projet :
 On a avancé à notre rythme pendant les séances de projet python, pas de problèmes rencontrés
 
